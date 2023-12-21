@@ -9,45 +9,27 @@
 
       const showInfo = () => {
         let y = 0;
-        const profileButton = document.querySelector("#profile-button");
-        const webButton = document.querySelector("#web-button");
-        const emailButton = document.querySelector("#email-button");
-        const locationButton = document.querySelector("#location-button");
-        const text = document.querySelector("#text");
-
-        profileButton.setAttribute("visible", true);
-        setTimeout(() => {
-          webButton.setAttribute("visible", true);
-        }, 300);
-        setTimeout(() => {
-          emailButton.setAttribute("visible", true);
-        }, 600);
-        setTimeout(() => {
-          locationButton.setAttribute("visible", true);
-        }, 900);
+        const fbButton = document.querySelector("#fb");
+        const webButton = document.querySelector("#web");
+        const instaButton = document.querySelector("#insta");
+        const twitterButton = document.querySelector("#twitter");
+        const linkButton = document.querySelector("#link");
 
         let currentTab = '';
         webButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "https://softmind.tech");
-          currentTab = 'web';
+          window.location.href="https://gauravbhagatacademy.com/";
         });
-        emailButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "hello@softmind.tech");
-          currentTab = 'email';
+        fbButton.addEventListener('click', function (evt) {
+          window.location.href="https://www.facebook.com/gauravbhagatacademy/";   
         });
-        profileButton.addEventListener('click', function (evt) {
-          text.setAttribute("value", "AR, VR solutions and consultation");
-          currentTab = 'profile';
+        instaButton.addEventListener('click', function (evt) {
+         window.location.href="https://www.instagram.com/gauravbhagatacademy/";  
         });
-        locationButton.addEventListener('click', function (evt) {
-          console.log("loc");
-          text.setAttribute("value", "Vancouver, Canada | Hong Kong");
-          currentTab = 'location';
+        twitterButton.addEventListener('click', function (evt) {
+         window.location.href="https://twitter.com/gbhagatacademy";
         });
-
-        text.addEventListener('click', function (evt) {
-          if (currentTab === 'web') {
-            window.location.href="https://softmind.tech";
+        linkButton.addEventListener('click', function (evt) {
+            window.location.href="https://www.linkedin.com/company/gauravbhagatacademy/?originalSubdomain=in";
           }
         });
       }
