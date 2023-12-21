@@ -13,8 +13,8 @@
         <img id="global" src="./global.jpg"/>
         <img id="client" src="./client.png"/>
         <img id="company" src="./company.jpg"/>
-        <img id="work" src="./ourwork.jpg"/>
-        <img id="work" src="./ourwork.jpg"/>
+        <img id="profile" src="./profile.jpg"/>
+        <video id="vd" src="./play.mp4"/>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -26,10 +26,16 @@
         <a-image position="0 0 0" height="0.552" width="1" src="#client" >
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 1">
-         <a-image position="0 0 0" height="0.552" width="1" src="#global" >
+         <a-image position="0 0 0" height="0.4" width="1" src="#global" >
       </a-entity>
      <a-entity mindar-image-target="targetIndex: 2">
-         <a-image position="0 0 0" height="0.552" width="1" src="#work" >
+         <a-image position="0 0 0" height="0.4" width="1" src="#company" >
+      </a-entity>
+       <a-entity mindar-image-target="targetIndex: 3">
+         <a-image position="0 0 0" height="0.4" width="1" src="#profile" >
+      </a-entity>
+       <a-entity mindar-image-target="targetIndex: 4">
+         <a-video position="0 0 0" height="0.4" width="1" src="#vd" >
       </a-entity>
     </a-scene>
   </body>
