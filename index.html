@@ -11,11 +11,10 @@
         AFRAME.registerComponent('videohandler', {
             init: function () {
                 var marker = this.el;
-
                 this.vid = document.querySelector("#paintandquest-video-link");
-
                 marker.addEventListener('markerFound', function () {
                     this.vid.play();
+                  console.log("marker_found");
                 }.bind(this));
 
         marker.addEventListener('markerLost', function() {
