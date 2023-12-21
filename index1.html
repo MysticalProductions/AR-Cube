@@ -9,21 +9,21 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <a-asset-item id="work" src="./ourwork.jpg"></a-asset-item>
-        <a-asset-item id="global" src="./global.jpg"></a-asset-item>
-        <a-asset-item id="client" src="./client.png"></a-asset-item>
-        <a-asset-item id="company" src="./company.jpg"></a-asset-item>
-        <a-asset-item id="work" src="./ourwork.jpg"></a-asset-item>
-        <a-asset-item id="work" src="./ourwork.jpg"></a-asset-item>
+        <img id="work" src="./ourwork.jpg"/>
+        <img id="global" src="./global.jpg"/>
+        <img id="client" src="./client.png"/>
+        <img id="company" src="./company.jpg"/>
+        <img id="work" src="./ourwork.jpg"/>
+        <img id="work" src="./ourwork.jpg"/>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-image rotation="0 0 0 " position="0 0.1 0" scale="0.5 0.5 0.5" src="#work >
+        <a-image src="#work >
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 5">
-        <a-image rotation="0 0 0 " position="0 0.1 0" scale="0.5 0.5 0.5" src="#client >
+        <a-image position="0 0 0" height="0.552" width="1" src="#client >
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 1">
         <a-image rotation="0 0 0 " position="0 0.1 0" scale="0.05 0.05 0.05" src="#company >
