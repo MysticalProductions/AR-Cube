@@ -6,13 +6,14 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
+      window.onload=function(){
         const fbButton = document.querySelector("#fb");
         const webButton = document.querySelector("#web");
         const instaButton = document.querySelector("#insta");
         const twitterButton = document.querySelector("#twitter");
         const linkButton = document.querySelector("#link");
 
-  
+        
         webButton.addEventListener('click', function (evt) {
           console.log("test1");
           window.location.href="https://gauravbhagatacademy.com/";
@@ -30,6 +31,7 @@
             window.location.href="https://www.linkedin.com/company/gauravbhagatacademy/?originalSubdomain=in";
           
         });
+      };
 
 
      
