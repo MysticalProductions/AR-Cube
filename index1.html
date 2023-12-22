@@ -35,6 +35,19 @@
               document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4");
               document.querySelector("#paintandquest-video-mp4").play();
             });
+          AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found")
+          });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target lost");
+             document.querySelector("#paintandquest-video-mp4").stop();
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+        
       };
     </script>
   </head>
@@ -93,7 +106,7 @@
           >
 
       </a-entity>
-       <a-entity mindar-image-target="targetIndex: 4">
+       <a-entity id="mytarget" mindar-image-target="targetIndex: 4">
          <a-video id="paintandquest-video-link" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
           <a-image id="paintandquest-preview-button" class="clickable" src="#paintandquest-preview" alpha-test="0.5" width="0.2" height="0.2" position="0 0 0.1">
               </a-image>
