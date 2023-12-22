@@ -41,6 +41,7 @@
 	       // detect target lost
 	      exampleTarget.addEventListener("targetLost", event => {
 	         console.log("target lost");
+		  document.querySelector("#paintandquest-video-mp4").stop();
 	       });
         
       };
