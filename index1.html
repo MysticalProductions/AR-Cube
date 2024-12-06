@@ -13,6 +13,7 @@
         const twitterButton = document.querySelector("#twitter");
         const linkButton = document.querySelector("#link");
         const previewButton = document.querySelector("#paintandquest-preview-button");
+	const previewButton1 = document.querySelector("#paintandquest-preview-button1");
         const exampleTarget = document.querySelector('#mytarget');
         webButton.addEventListener('click', function (evt) {
           window.open("https://gauravbhagatacademy.com", '_blank');
@@ -35,6 +36,11 @@
               document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4");
               document.querySelector("#paintandquest-video-mp4").play();
             });
+	      previewButton1.addEventListener('click', () => {
+            previewButton1.setAttribute("visible", false);
+              document.querySelector("#paintandquest-video-link").setAttribute("src", "#paintandquest-video-mp4-1");
+              document.querySelector("#paintandquest-video-mp4-1").play();
+            });
          exampleTarget.addEventListener("targetFound", event => {
 	         console.log("target found");
 	          });
@@ -44,6 +50,10 @@
 		  document.querySelector("#paintandquest-video-mp4").pause();     
                   document.querySelector("#paintandquest-video-mp4").currentTime = 0;
 		  previewButton.setAttribute("visible", true);
+                  document.querySelector("#paintandquest-video-mp4-1").pause();     
+                  document.querySelector("#paintandquest-video-mp4-1").currentTime = 0;
+		  previewButton1.setAttribute("visible", true);
+                  
 	       });
         
       };
@@ -64,6 +74,7 @@
         <img id="web-icon" src="./web.png"/>
         <img id="paintandquest-preview" src="./play.png" />
           <video id="paintandquest-video-mp4" autoplay="false" loop="true" src="./play.mp4"></video>
+	  <video id="paintandquest-video-mp4-1" autoplay="false" loop="true" src="./play1.mp4"></video>
       </a-assets>
 
        <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
@@ -79,7 +90,9 @@
          <a-image position="0 0 0" height="0.4" width="1" src="#global" >
       </a-entity>
      <a-entity mindar-image-target="targetIndex: 2">
-         <a-image position="0 0 0" height="0.4" width="1" src="#company" >
+        <a-video id="paintandquest-video-link-1" webkit-playsinline playsinline width="1" height="0.552" position="0 0 0"></a-video>
+          <a-image id="paintandquest-preview-button1" class="clickable" src="#paintandquest-preview" alpha-test="0.5" width="0.2" height="0.2" position="0 0 0.1">
+              </a-image>
       </a-entity>
        <a-entity mindar-image-target="targetIndex: 3">
          <a-image position="0 0 0" height="0.55" width="1" src="#profile" >
